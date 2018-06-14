@@ -11,9 +11,9 @@
         "react/child-process": "^0.5.2"
     },
     "require-dev": {
-        "behat/behat": "^3.4",
         "phpunit/phpunit": "^6.5",
-        "guzzlehttp/guzzle": "^6.3"
+        "guzzlehttp/guzzle": "^6.3",
+        "behat/behat": "^3.4"
     },
     "autoload": {
         "psr-4": {
