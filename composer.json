@@ -1,0 +1,37 @@
+{
+    "name": "ecomdev/async-static-resource-server",
+    "description": "Async static content server with Command API over the socket.",
+    "type": "library",
+    "require": {
+        "php": "^7.0",
+        "react/event-loop": "^0.5.2",
+        "react/socket": "^0.8.12",
+        "react/http": "^0.8.3",
+        "react/http-client": "^0.5.9",
+        "react/child-process": "^0.5.2"
+    },
+    "require-dev": {
+        "behat/behat": "^3.4",
+        "phpunit/phpunit": "^6.5",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "EcomDev\\AsyncStaticResourceServer\\": "src/"
+        },
+        "exclude-from-classmap": ["EcomDev\\AsyncStaticResourceServer\\**Test.php"]
+    },
+    "scripts": {
+        "test": "phpunit --colors --coverage-text",
+        "acceptance": "behat",
+        "behat": "behat"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ivan Chepurnyi",
+            "email": "ivan.chepurnyi@ecomdev.org"
+        }
+    ],
+    "minimum-stability": "stable"
+}

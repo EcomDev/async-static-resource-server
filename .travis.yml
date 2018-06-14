@@ -1,0 +1,29 @@
+sudo: false
+
+language: php
+
+php:
+  - 7.0
+  - 7.1
+  - 7.2
+
+matrix:
+  env:
+    - USE_LOCK=0
+    - USE_LOCK=1
+  allow_failures:
+    - env: USE_LOCK=0
+  fast_finish: true
+
+cache:
+  directories:
+    - vendor
+
+before_script:
+  - [[ "$USE_LOCK" == 0 ]] || rm composer.lock
+  - composer self-update
+  - composer install
+
+script:
+  - composer test
+  - composer acceptance
